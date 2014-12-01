@@ -42,3 +42,6 @@ gem 'spring',        :group=> :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'heroku_secrets', :github =>'alexpeattie/heroku_secrets'
+
+
