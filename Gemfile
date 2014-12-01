@@ -45,4 +45,4 @@ gem 'spring',        :group=> :development
 
 gem 'heroku_secrets', :github =>'alexpeattie/heroku_secrets'
 
-ruby '2.1.5p273'
+ruby '2.1.5'
