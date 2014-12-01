@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <type id="JRailsFacetType" />
+    <type id="JRUBY" />
+  </component>
+  <component name="IdProvider" IDEtalkID="212B4C70AC96A0E8B534047942DD77FB" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" />
+</project>
