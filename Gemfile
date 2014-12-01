@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
+gem 'rails_12factor', :group => :production
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'mongoid', '~> 4.0.0'
