@@ -205,3 +205,77 @@ Started GET "/" for 127.0.0.1 at 2014-12-01 14:10:34 -0800
 Processing by Rails::WelcomeController#index as HTML
   Rendered /home/xxx/.rvm/gems/ruby-2.1.5@project2/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
 Completed 200 OK in 23ms (Views: 16.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-01 14:35:19 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5@project2/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (0.9ms)
+Completed 200 OK in 9ms (Views: 3.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-01 14:35:25 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `match' for nil:NilClass):
+     9:   </thead>
+    10: 
+    11:   <tbody>
+    12:     <% @users.each do |user| %>
+    13:       <tr>
+    14:         <td><%= user.fisrt_name %></td>
+    15:         <td><%= link_to 'Show', user %></td>
+  app/views/users/index.html.erb:12:in `_app_views_users_index_html_erb__621137600910059046_41206740'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5@project2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5@project2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5@project2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-01 14:36:01 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (10.2ms)
+  Rendered users/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 503ms (Views: 502.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-01 14:36:02 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-01 14:36:02 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-01 14:36:02 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-01 14:36:02 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-01 14:36:02 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-01 14:36:02 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-01 14:36:02 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-01 14:36:02 -0800
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-01 14:36:05 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"asd"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `match' for nil:NilClass):
+  app/controllers/users_controller.rb:30:in `block in create'
+  app/controllers/users_controller.rb:29:in `create'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5@project2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5@project2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5@project2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5@project2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
