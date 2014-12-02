@@ -7,8 +7,15 @@ gem 'rails_12factor', :group => :production
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'mongoid', '~> 4.0.0'
+gem 'symbolize'
 gem 'moped', '~> 2.0.0'
-gem 'bson', '~> 2.2'
+gem 'bson', '~> 2.3.0'
+
+#date validation
+gem 'validates_timeliness', '~> 3.0'
+
+#email validation
+gem 'validates_email_format_of'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

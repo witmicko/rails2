@@ -1,21 +1,46 @@
 <%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name %>
     </div>
-  <% end %>
+    <div class="field">
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+    </div>
 
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="field">
+      <%= f.label :gender %><br>
+      <%= f.select :gender, User::GENDERS %>
+    </div>
+
+    <div class="field">
+      <%= f.label :athlete_type %><br>
+      <%= f.select :athlete_type, User::ATHLETE_TYPES %>
+    </div>
+
+    <div class="field">
+      <%= date_field(:user, :date_of_birth) %>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
