@@ -5910,3 +5910,1097 @@ Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 06:32:12 -0800
 
 
 Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 06:32:12 -0800
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: The `Validator#setup` instance method is deprecated and will be removed on Rails 4.2. Do your setup in the constructor instead:
+
+class MyValidator < ActiveModel::Validator
+  def initialize(options={})
+    super
+    options[:class].send :attr_accessor, :custom_attribute
+  end
+end
+. (called from <class:User> at /home/xxx/project2/app/models/user.rb:18)
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 245.2320ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 47.2817ms
+  Rendered users/index.html.erb within layouts/application (472.8ms)
+Completed 200 OK in 758ms (Views: 711.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:28 +0000
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:23:33 +0000
+Processing by UsersController#index as HTML
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.6895ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 33.3534ms
+  Rendered users/index.html.erb within layouts/application (179.1ms)
+Completed 200 OK in 209ms (Views: 207.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:23:34 +0000
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:32:20 +0000
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 6ms
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:14:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:32:21 +0000
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 5ms
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:14:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:32:21 +0000
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 5ms
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:14:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:35:05 +0000
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: The `Validator#setup` instance method is deprecated and will be removed on Rails 4.2. Do your setup in the constructor instead:
+
+class MyValidator < ActiveModel::Validator
+  def initialize(options={})
+    super
+    options[:class].send :attr_accessor, :custom_attribute
+  end
+end
+. (called from <class:User> at /home/xxx/project2/app/models/user.rb:23)
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 139.8333ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 55.6991ms
+  Rendered users/index.html.erb within layouts/application (468.0ms)
+Completed 200 OK in 552ms (Views: 539.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:35:06 +0000
+
+
+Started GET "/users/547dc9e7756275596f030000" for 127.0.0.1 at 2014-12-02 20:35:09 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"547dc9e7756275596f030000"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.4968ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547dc9e7756275596f030000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 35.7032ms
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 274ms (Views: 55.4ms)
+
+
+Started GET "/users/547dc9e7756275596f030000/edit" for 127.0.0.1 at 2014-12-02 20:35:12 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"547dc9e7756275596f030000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547dc9e7756275596f030000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 37.9144ms
+  Rendered users/_form.html.erb (82.4ms)
+  Rendered users/edit.html.erb within layouts/application (99.9ms)
+Completed 200 OK in 204ms (Views: 165.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:35:14 +0000
+Processing by UsersController#index as HTML
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 33.9644ms
+  Rendered users/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 64ms (Views: 63.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: The `Validator#setup` instance method is deprecated and will be removed on Rails 4.2. Do your setup in the constructor instead:
+
+class MyValidator < ActiveModel::Validator
+  def initialize(options={})
+    super
+    options[:class].send :attr_accessor, :custom_attribute
+  end
+end
+. (called from <class:User> at /home/xxx/project2/app/models/user.rb:26)
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.6011ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.3858ms
+  Rendered users/index.html.erb within layouts/application (190.3ms)
+Completed 200 OK in 225ms (Views: 218.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:04 +0000
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-02 20:41:05 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (11.6ms)
+  Rendered users/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 50ms (Views: 49.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:41:08 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameters: password, password_confirmation
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.4030ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>""} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 34.9683ms
+  Rendered users/_form.html.erb (9.3ms)
+  Rendered users/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 224ms (Views: 38.9ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:09 +0000
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"asdasd", "last_name"=>"asdasd", "email"=>"asdsd@asd.sd", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-03", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameters: password, password_confirmation
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"asdsd@asd.sd"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 35.7610ms
+  Rendered users/_form.html.erb (4.5ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 71ms (Views: 30.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:31 +0000
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"asdasd", "last_name"=>"asdasd", "email"=>"asdsd@asd.sd", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-03", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameters: password, password_confirmation
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.4741ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"asdsd@asd.sd"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 35.0971ms
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 233ms (Views: 42.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:41:40 +0000
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:42:45 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"asdasd", "last_name"=>"asdasd", "email"=>"asdsd@asd.sd", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-03", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+DEPRECATION WARNING: The `Validator#setup` instance method is deprecated and will be removed on Rails 4.2. Do your setup in the constructor instead:
+
+class MyValidator < ActiveModel::Validator
+  def initialize(options={})
+    super
+    options[:class].send :attr_accessor, :custom_attribute
+  end
+end
+. (called from <class:User> at /home/xxx/project2/app/models/user.rb:26)
+Unpermitted parameters: password, password_confirmation
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 35.1513ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"asdsd@asd.sd"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 34.6678ms
+  Rendered users/_form.html.erb (13.9ms)
+  Rendered users/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 244ms (Views: 54.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:42:46 +0000
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:44:15 +0000
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: The `Validator#setup` instance method is deprecated and will be removed on Rails 4.2. Do your setup in the constructor instead:
+
+class MyValidator < ActiveModel::Validator
+  def initialize(options={})
+    super
+    options[:class].send :attr_accessor, :custom_attribute
+  end
+end
+. (called from <class:User> at /home/xxx/project2/app/models/user.rb:26)
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 142.9023ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 35.5000ms
+  Rendered users/index.html.erb within layouts/application (293.7ms)
+Completed 200 OK in 372ms (Views: 358.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:44:16 +0000
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-02 20:44:19 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.9ms)
+  Rendered users/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 39ms (Views: 38.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:44:31 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"asdasd", "last_name"=>"ogrodniczak", "email"=>"asssdsd@asd.sd", "gender"=>"Female", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-02", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"asssdsd@asd.sd"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 49.1096ms
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=users documents=[{"_id"=>BSON::ObjectId('547e24b07562752975000000'), "first_name"=>"asdasd", "last_name"=>"ogrodniczak", "date_of_birth"=>2014-12-02 00:00:00 UTC, "email"=>"asssdsd@asd.sd", "gender"=>"Female", "athlete_type"=>"Runner", "password_digest"=>"$2a$10$Im69c43gktrzxqyO8hlBie73R2ukWQTSXrORQzgnVXDRTVtd0Mo.6"}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 42.1801ms
+Completed 500 Internal Server Error in 151ms
+
+Moped::Errors::OperationFailure (The operation: #<Moped::Protocol::Command
+  @length=75
+  @request_id=7
+  @response_to=0
+  @op_code=2004
+  @flags=[]
+  @full_collection_name="app32120200.$cmd"
+  @skip=0
+  @limit=-1
+  @selector={:getlasterror=>1, :w=>1}
+  @fields=nil>
+failed with error 11000: "E11000 duplicate key error index: app32120200.users.$u_id_index  dup key: { : null }"
+
+See https://github.com/mongodb/mongo/blob/master/docs/errors.md
+for details about this error.):
+  app/controllers/users_controller.rb:30:in `block in create'
+  app/controllers/users_controller.rb:29:in `create'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"asdasd", "last_name"=>"ogrodniczak", "email"=>"asssdsd@asd.sd", "gender"=>"Female", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-02", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.5963ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"asssdsd@asd.sd"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 35.0754ms
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=users documents=[{"_id"=>BSON::ObjectId('547e24fb7562752975010000'), "first_name"=>"asdasd", "last_name"=>"ogrodniczak", "date_of_birth"=>2014-12-02 00:00:00 UTC, "email"=>"asssdsd@asd.sd", "gender"=>"Female", "athlete_type"=>"Runner", "password_digest"=>"$2a$10$xk/jl0z9cDAZTrlsZ7dHHOVeUceJtSVnZg.sXyozIuXR9y/hMQKR."}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 42.2695ms
+Redirected to http://localhost:3000/users/547e24fb7562752975010000
+Completed 302 Found in 280ms
+
+
+Started GET "/users/547e24fb7562752975010000" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"547e24fb7562752975010000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547e24fb7562752975010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 35.4269ms
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 84ms (Views: 47.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:45:47 +0000
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:45:51 +0000
+Processing by UsersController#index as HTML
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 33.6245ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 33.4251ms
+  Rendered users/index.html.erb within layouts/application (174.7ms)
+Completed 200 OK in 201ms (Views: 200.9ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+Processing by UsersController#new as HTML
+DEPRECATION WARNING: The `Validator#setup` instance method is deprecated and will be removed on Rails 4.2. Do your setup in the constructor instead:
+
+class MyValidator < ActiveModel::Validator
+  def initialize(options={})
+    super
+    options[:class].send :attr_accessor, :custom_attribute
+  end
+end
+. (called from <class:User> at /home/xxx/project2/app/models/user.rb:26)
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 49ms (Views: 42.7ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:46:43 +0000
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:48:35 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"123", "last_name"=>"123", "email"=>"123@123.23", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-04", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 36.1844ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"123@123.23"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 35.8157ms
+  Rendered users/_form.html.erb (16.7ms)
+  Rendered users/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 332ms (Views: 82.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:48:36 +0000
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:48:50 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"123", "last_name"=>"123", "email"=>"123@asd.asd", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-04", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 35.3232ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"123@asd.asd"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 35.3854ms
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=users documents=[{"_id"=>BSON::ObjectId('547e25b27562752975020000'), "first_name"=>"123", "last_name"=>"123", "date_of_birth"=>2014-12-04 00:00:00 UTC, "email"=>"123@asd.asd", "gender"=>"Male", "athlete_type"=>"Runner", "password_digest"=>"$2a$10$5eK8a.r2ABtf976x/L42xuxHiY.ixtvNtBsULx/Yx04YErvV4tMNy"}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 42.0157ms
+Completed 500 Internal Server Error in 282ms
+
+Moped::Errors::OperationFailure (The operation: #<Moped::Protocol::Command
+  @length=75
+  @request_id=20
+  @response_to=0
+  @op_code=2004
+  @flags=[]
+  @full_collection_name="app32120200.$cmd"
+  @skip=0
+  @limit=-1
+  @selector={:getlasterror=>1, :w=>1}
+  @fields=nil>
+failed with error 11000: "E11000 duplicate key error index: app32120200.users.$u_id_index  dup key: { : null }"
+
+See https://github.com/mongodb/mongo/blob/master/docs/errors.md
+for details about this error.):
+  app/controllers/users_controller.rb:30:in `block in create'
+  app/controllers/users_controller.rb:29:in `create'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.7ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:49:19 +0000
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:49:30 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"123", "last_name"=>"123", "email"=>"1dd23@asd.asddd", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-04", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 38.8095ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"1dd23@asd.asddd"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 34.4930ms
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=users documents=[{"_id"=>BSON::ObjectId('547e25db7562752975030000'), "first_name"=>"123", "last_name"=>"123", "date_of_birth"=>2014-12-04 00:00:00 UTC, "email"=>"1dd23@asd.asddd", "gender"=>"Male", "athlete_type"=>"Runner", "password_digest"=>"$2a$10$IOzZ/koJAIwuBHqGjELqZe.3Jxvtu.jKq6.tDySQTkNymK6TO3QkW"}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 41.3358ms
+Completed 500 Internal Server Error in 313ms
+
+Moped::Errors::OperationFailure (The operation: #<Moped::Protocol::Command
+  @length=75
+  @request_id=24
+  @response_to=0
+  @op_code=2004
+  @flags=[]
+  @full_collection_name="app32120200.$cmd"
+  @skip=0
+  @limit=-1
+  @selector={:getlasterror=>1, :w=>1}
+  @fields=nil>
+failed with error 11000: "E11000 duplicate key error index: app32120200.users.$u_id_index  dup key: { : null }"
+
+See https://github.com/mongodb/mongo/blob/master/docs/errors.md
+for details about this error.):
+  app/controllers/users_controller.rb:30:in `block in create'
+  app/controllers/users_controller.rb:29:in `create'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:53:11 +0000
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: The `Validator#setup` instance method is deprecated and will be removed on Rails 4.2. Do your setup in the constructor instead:
+
+class MyValidator < ActiveModel::Validator
+  def initialize(options={})
+    super
+    options[:class].send :attr_accessor, :custom_attribute
+  end
+end
+. (called from <class:User> at /home/xxx/project2/app/models/user.rb:25)
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 35.1614ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.5394ms
+  Rendered users/index.html.erb within layouts/application (181.9ms)
+Completed 200 OK in 231ms (Views: 225.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-02 20:53:13 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 38ms (Views: 37.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"michal", "last_name"=>"ogrodniczak", "email"=>"shuakhwe@gmail.com", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-02", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"shuakhwe@gmail.com"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 35.8302ms
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=users documents=[{"_id"=>BSON::ObjectId('547e26ca7562752975040000'), "first_name"=>"michal", "last_name"=>"ogrodniczak", "date_of_birth"=>2014-12-02 00:00:00 UTC, "email"=>"shuakhwe@gmail.com", "gender"=>"Male", "athlete_type"=>"Runner", "password_digest"=>"$2a$10$jXnQZZo1bw94uBfjMhPT3e2LIeYtgp9SG/eSoP/DjjOnVH5DQi8ei"}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 41.9408ms
+Redirected to http://localhost:3000/users/547e26ca7562752975040000
+Completed 302 Found in 136ms
+
+
+Started GET "/users/547e26ca7562752975040000" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"547e26ca7562752975040000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547e26ca7562752975040000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 35.7931ms
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 91ms (Views: 54.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:53:30 +0000
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:53:32 +0000
+Processing by UsersController#index as HTML
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.3214ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.2382ms
+  Rendered users/index.html.erb within layouts/application (179.3ms)
+Completed 200 OK in 245ms (Views: 244.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-02 20:53:33 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.9ms)
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 30ms (Views: 29.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:53:42 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"michal", "last_name"=>"ogrodniczak", "email"=>"shuakhwe@gmail.comsss", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-03", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"shuakhwe@gmail.comsss"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 35.2516ms
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=users documents=[{"_id"=>BSON::ObjectId('547e26d67562752975050000'), "first_name"=>"michal", "last_name"=>"ogrodniczak", "date_of_birth"=>2014-12-03 00:00:00 UTC, "email"=>"shuakhwe@gmail.comsss", "gender"=>"Male", "athlete_type"=>"Runner", "password_digest"=>"$2a$10$xsN9HiOqYgoPZcEjWPMjh.JcLfleB8soOfQpFI0Pwx3kdhgcEQW06"}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 41.7602ms
+Completed 500 Internal Server Error in 134ms
+
+Moped::Errors::OperationFailure (The operation: #<Moped::Protocol::Command
+  @length=75
+  @request_id=35
+  @response_to=0
+  @op_code=2004
+  @flags=[]
+  @full_collection_name="app32120200.$cmd"
+  @skip=0
+  @limit=-1
+  @selector={:getlasterror=>1, :w=>1}
+  @fields=nil>
+failed with error 11000: "E11000 duplicate key error index: app32120200.users.$u_id_index  dup key: { : null }"
+
+See https://github.com/mongodb/mongo/blob/master/docs/errors.md
+for details about this error.):
+  app/controllers/users_controller.rb:30:in `block in create'
+  app/controllers/users_controller.rb:29:in `create'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"michal", "last_name"=>"ogrodniczak", "email"=>"shuakhwe@gmail.comsss", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-03", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"shuakhwe@gmail.comsss"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 34.8193ms
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=users documents=[{"_id"=>BSON::ObjectId('547e26ea7562752975060000'), "first_name"=>"michal", "last_name"=>"ogrodniczak", "date_of_birth"=>2014-12-03 00:00:00 UTC, "email"=>"shuakhwe@gmail.comsss", "gender"=>"Male", "athlete_type"=>"Runner", "password_digest"=>"$2a$10$wDSW1wm9VGa4lMGXuyNZ9.aPoay0Txu68HhhiJLREnywPRg7CdUy6"}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 41.4873ms
+Redirected to http://localhost:3000/users/547e26ea7562752975060000
+Completed 302 Found in 136ms
+
+
+Started GET "/users/547e26ea7562752975060000" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"547e26ea7562752975060000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547e26ea7562752975060000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 36.0898ms
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 68ms (Views: 31.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:02 +0000
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:54:05 +0000
+Processing by UsersController#index as HTML
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.3028ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 35.6264ms
+  Rendered users/index.html.erb within layouts/application (178.8ms)
+Completed 200 OK in 202ms (Views: 201.7ms)
+
+
+Started DELETE "/users/547e26ca7562752975040000" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "id"=>"547e26ca7562752975040000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547e26ca7562752975040000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 35.4867ms
+  MOPED: 54.220.4.70:10049 DELETE       database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547e26ca7562752975040000')} flags=[:remove_first]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 36.3848ms
+Redirected to http://localhost:3000/users
+Completed 302 Found in 74ms
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+Processing by UsersController#index as HTML
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 33.3803ms
+  Rendered users/index.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 64ms (Views: 63.6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:11 +0000
+
+
+Started DELETE "/users/547e26ea7562752975060000" for 127.0.0.1 at 2014-12-02 20:54:12 +0000
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "id"=>"547e26ea7562752975060000"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.0766ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547e26ea7562752975060000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.9421ms
+  MOPED: 54.220.4.70:10049 DELETE       database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547e26ea7562752975060000')} flags=[:remove_first]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 35.9132ms
+Redirected to http://localhost:3000/users
+Completed 302 Found in 217ms
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:54:12 +0000
+Processing by UsersController#index as HTML
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 33.0967ms
+  Rendered users/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 57ms (Views: 56.8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:54:13 +0000
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-02 20:55:10 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 32.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "user"=>{"first_name"=>"michal", "last_name"=>"ogrodniczak", "email"=>"shuakhwe@gmail.com", "gender"=>"Male", "athlete_type"=>"Runner", "date_of_birth"=>"2014-12-03", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 35.1690ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"email"=>"shuakhwe@gmail.com"} flags=[] limit=-1 skip=0 batch_size=nil fields={:_id=>1} runtime: 34.8280ms
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=users documents=[{"_id"=>BSON::ObjectId('547e27377562752975070000'), "first_name"=>"michal", "last_name"=>"ogrodniczak", "date_of_birth"=>2014-12-03 00:00:00 UTC, "email"=>"shuakhwe@gmail.com", "gender"=>"Male", "athlete_type"=>"Runner", "password_digest"=>"$2a$10$RJXcdeN/LU.Pecegux3LBuzkKydfXbwEe3kHNnnbtbqQn8y9EPeZy"}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 41.9064ms
+Redirected to http://localhost:3000/users/547e27377562752975070000
+Completed 302 Found in 301ms
+
+
+Started GET "/users/547e27377562752975070000" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"547e27377562752975070000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={"_id"=>BSON::ObjectId('547e27377562752975070000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.8238ms
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 67ms (Views: 31.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 20:55:19 +0000
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 20:55:57 +0000
+Processing by UsersController#index as HTML
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.6864ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 40.9677ms
+  Rendered users/index.html.erb within layouts/application (187.7ms)
+Completed 200 OK in 241ms (Views: 240.7ms)

@@ -39,6 +39,12 @@
       <%= date_field(:user, :date_of_birth) %>
     </div>
 
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation, 'Confirmation' %>
+    <%= f.password_field :password_confirmation %>
+
 
     <div class="actions">
       <%= f.submit %>

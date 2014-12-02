@@ -74,6 +74,8 @@ class UsersController < ApplicationController
                                  :date_of_birth,
                                  :email,
                                  :gender,
-                                 :athlete_type)
+                                 :athlete_type,
+                                 :password,
+                                 :password_confirmation)
   end
 end
