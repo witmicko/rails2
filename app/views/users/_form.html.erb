@@ -1,52 +1,85 @@
-<%= form_for(@user) do |f| %>
-    <% if @user.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<%= form_for @user, :html => {:class => "form-horizontal user"} do |f| %>
 
-          <ul>
-            <% @user.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
+    <% if @user.errors.any? %>
+        <div id="error_expl" class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= pluralize(@user.errors.count, "error") %> prohibited this user from being
+              saved:</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
         </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :first_name %><br>
-      <%= f.text_field :first_name %>
+    <div class="form-group">
+      <%= f.label :first_name, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-5">
+        <%= f.text_field :first_name, :class => 'form-control' %>
+      </div>
+      <%= f.error_span(:first_name) %>
     </div>
-    <div class="field">
-      <%= f.label :last_name %><br>
-      <%= f.text_field :last_name %>
+    <div class="form-group">
+      <%= f.label :last_name, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-5">
+        <%= f.text_field :last_name, :class => 'form-control' %>
+      </div>
+      <%= f.error_span(:last_name) %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-5">
+        <%= f.text_field :email, :class => 'form-control' %>
+      </div>
+      <%= f.error_span(:email) %>
+    </div>
+    <div class="form-group">
+      <%= f.label :gender, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-5">
+        <%= f.select :gender, User::GENDERS, :class => 'form-control' %>
+      </div>
+      <%= f.error_span(:gender) %>
+    </div>
+    <div class="form-group">
+      <%= f.label :athlete_type, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-5">
+        <%= f.select :athlete_type, User::ATHLETE_TYPES, :class => 'form-control' %>
+      </div>
+      <%= f.error_span(:athlete_type) %>
+    </div>
+    <div class="form-group">
+      <%= f.label :date_of_birth, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-5">
+        <%= date_field(:user, :date_of_birth)%>
+      </div>
+      <%= f.error_span(:date_of_birth) %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-5">
+        <%= f.password_field :password, :value=> '123456', :class => 'form-control'  %>
+      </div>
+      <%= f.error_span(:password) %>
     </div>
 
-    <div class="field">
-      <%= f.label :email %><br>
-      <%= f.text_field :email %>
+    <div class="form-group">
+      <%= f.label :password_confirmation, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-5">
+        <%= f.password_field :password_confirmation,:value=> '123456', :class => 'form-control' %>
+      </div>
+      <%= f.error_span(:password) %>
     </div>
 
-    <div class="field">
-      <%= f.label :gender %><br>
-      <%= f.select :gender, User::GENDERS %>
+    <div class="form-group">
+      <div class="col-lg-offset-2 col-lg-5">
+        <%= f.submit nil, :class => 'btn btn-primary' %>
+        <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                    users_path, :class => 'btn btn-default' %>
+      </div>
     </div>
 
-    <div class="field">
-      <%= f.label :athlete_type %><br>
-      <%= f.select :athlete_type, User::ATHLETE_TYPES %>
-    </div>
-
-    <div class="field">
-      <%= date_field(:user, :date_of_birth) %>
-    </div>
-
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-    <%= f.label :password_confirmation, 'Confirmation' %>
-    <%= f.password_field :password_confirmation %>
-
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
 <% end %>

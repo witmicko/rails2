@@ -17,6 +17,11 @@ gem 'validates_timeliness', '~> 3.0'
 #email validation
 gem 'validates_email_format_of'
 
+#bootstrap
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails", :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => 'master'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

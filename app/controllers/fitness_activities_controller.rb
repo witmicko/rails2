@@ -69,6 +69,6 @@ class FitnessActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fitness_activity_params
-      params.require(:fitness_activity).permit(:type, :distance, :heart_rate, :calories, :duration)
+      params.require(:fitness_activity).permit(:act_type, :distance, :heart_rate, :calories, :duration)
     end
 end

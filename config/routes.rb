@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  resources :users do
+    resources :activities
+  end
   resources :strength_activities
-
   resources :fitness_activities
 
-  resources :activities
 
   get 'users/index'
 
@@ -11,9 +12,8 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
-  match '/signup',  to: 'users#new', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
 
-  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

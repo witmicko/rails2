@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+  include Mongoid::Timestamps
   include ActiveModel::SecurePassword
 
   field :first_name, type: String
@@ -11,7 +12,7 @@ class User
   field :password_digest
   has_secure_password
 
-  has_many :activities, cascade_callbacks:true, autosave: true
+  embeds_many :activities, cascade_callbacks:true
 
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true

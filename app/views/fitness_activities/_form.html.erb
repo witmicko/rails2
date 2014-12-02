@@ -12,9 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :type %><br>
-    <%= f.text_field :type %>
+    <%= f.label :act_type %><br>
+    <%= f.select :act_type , FitnessActivity::TYPES%>
   </div>
+
   <div class="field">
     <%= f.label :distance %><br>
     <%= f.text_field :distance %>

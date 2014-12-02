@@ -69,6 +69,6 @@ class StrengthActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def strength_activity_params
-      params.require(:strength_activity).permit(:type, :weight, :sets, :reps)
+      params.require(:strength_activity).permit(:act_type, :weight, :sets, :reps)
     end
 end
