@@ -1,0 +1,33 @@
+<h1>Listing fitness_activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Distance</th>
+      <th>Heart rate</th>
+      <th>Calories</th>
+      <th>Duration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fitness_activities.each do |fitness_activity| %>
+      <tr>
+        <td><%= fitness_activity.type %></td>
+        <td><%= fitness_activity.distance %></td>
+        <td><%= fitness_activity.heart_rate %></td>
+        <td><%= fitness_activity.calories %></td>
+        <td><%= fitness_activity.duration %></td>
+        <td><%= link_to 'Show', fitness_activity %></td>
+        <td><%= link_to 'Edit', edit_fitness_activity_path(fitness_activity) %></td>
+        <td><%= link_to 'Destroy', fitness_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fitness activity', new_fitness_activity_path %>

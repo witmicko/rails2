@@ -7004,3 +7004,740 @@ Processing by UsersController#index as HTML
   MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 40.9677ms
   Rendered users/index.html.erb within layouts/application (187.7ms)
 Completed 200 OK in 241ms (Views: 240.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-02 21:15:11 +0000
+Processing by UsersController#index as HTML
+DEPRECATION WARNING: The `Validator#setup` instance method is deprecated and will be removed on Rails 4.2. Do your setup in the constructor instead:
+
+class MyValidator < ActiveModel::Validator
+  def initialize(options={})
+    super
+    options[:class].send :attr_accessor, :custom_attribute
+  end
+end
+. (called from <class:User> at /home/xxx/project2/app/models/user.rb:25)
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 142.6580ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=users selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.9525ms
+  Rendered users/index.html.erb within layouts/application (306.9ms)
+Completed 200 OK in 760ms (Views: 746.3ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:12 +0000
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-12-02 21:15:16 +0000
+Processing by ActivitiesController#index as HTML
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `before_avatar_post_process' for Activity:Class):
+  app/models/activity.rb:7:in `<class:Activity>'
+  app/models/activity.rb:1:in `<top (required)>'
+  app/controllers/activities_controller.rb:7:in `index'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-12-02 21:15:35 +0000
+Processing by ActivitiesController#index as HTML
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.9661ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.0714ms
+  Rendered activities/index.html.erb within layouts/application (179.6ms)
+Completed 200 OK in 228ms (Views: 223.4ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:35 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 21:15:36 +0000
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2014-12-02 21:15:37 +0000
+Processing by ActivitiesController#new as HTML
+  Rendered activities/_form.html.erb (27.9ms)
+  Rendered activities/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 63ms (Views: 62.0ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "activity"=>{"note"=>"zxczxc", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00000004ce6928 @tempfile=#<Tempfile:/tmp/RackMultipart20141202-12020-h7y8ch>, @original_filename="134-paperclip.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"activity[photo]\"; filename=\"134-paperclip.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Activity"}
+Unpermitted parameters: photo
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=activities documents=[{"_id"=>BSON::ObjectId('547e2c157562752ef4000000'), "note"=>"zxczxc"}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 37.4184ms
+Redirected to http://localhost:3000/activities/547e2c157562752ef4000000
+Completed 302 Found in 40ms
+
+
+Started GET "/activities/547e2c157562752ef4000000" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"547e2c157562752ef4000000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={"_id"=>BSON::ObjectId('547e2c157562752ef4000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 33.5029ms
+  Rendered activities/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 75ms (Views: 40.0ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:05 +0000
+
+
+Started GET "/activities/547e2c157562752ef4000000" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"547e2c157562752ef4000000"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 34.5074ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={"_id"=>BSON::ObjectId('547e2c157562752ef4000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.4208ms
+  Rendered activities/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 228ms (Views: 50.0ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2014-12-02 21:16:47 +0000
+
+ActionController::RoutingError (No route matches [GET] "/photos/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/xxx/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/xxx/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/xxx/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.3ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.8ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.7ms)
+
+
+Started GET "/activities/547e2c157562752ef4000000/edit" for 127.0.0.1 at 2014-12-02 21:17:51 +0000
+Processing by ActivitiesController#edit as HTML
+  Parameters: {"id"=>"547e2c157562752ef4000000"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 35.8086ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={"_id"=>BSON::ObjectId('547e2c157562752ef4000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.6260ms
+Completed 404 Not Found in 187ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class Activity with id(s) 547e2c157562752ef4000000.
+Summary:
+  When calling Activity.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 547e2c157562752ef4000000 ... (1 total) and the following ids were not found: 547e2c157562752ef4000000.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/activities_controller.rb:67:in `set_activity'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.6ms)
+
+
+Started GET "/activities/547e2c157562752ef4000000/edit" for 127.0.0.1 at 2014-12-02 21:17:52 +0000
+Processing by ActivitiesController#edit as HTML
+  Parameters: {"id"=>"547e2c157562752ef4000000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={"_id"=>BSON::ObjectId('547e2c157562752ef4000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.5925ms
+Completed 404 Not Found in 36ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class Activity with id(s) 547e2c157562752ef4000000.
+Summary:
+  When calling Activity.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 547e2c157562752ef4000000 ... (1 total) and the following ids were not found: 547e2c157562752ef4000000.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/activities_controller.rb:67:in `set_activity'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-12-02 21:17:56 +0000
+Processing by ActivitiesController#index as HTML
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 33.9174ms
+  Rendered activities/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 69ms (Views: 68.4ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2014-12-02 21:17:57 +0000
+Processing by ActivitiesController#new as HTML
+  Rendered activities/_form.html.erb (1.8ms)
+  Rendered activities/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 40.7ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2014-12-02 21:18:03 +0000
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "activity"=>{"note"=>"asdasd", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000000058e0260 @tempfile=#<Tempfile:/tmp/RackMultipart20141202-12020-15u3fa1>, @original_filename="134-paperclip.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"activity[photo]\"; filename=\"134-paperclip.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Activity"}
+Completed 500 Internal Server Error in 23ms
+
+Paperclip::Errors::MissingRequiredValidatorError (Paperclip::Errors::MissingRequiredValidatorError):
+  app/controllers/activities_controller.rb:27:in `new'
+  app/controllers/activities_controller.rb:27:in `create'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2014-12-02 21:19:03 +0000
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AWMsVk7v8vaBzWr6c61Yk1yc/ykADzgLoPnRV+WyG4=", "activity"=>{"note"=>"asdasd", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000000498ab08 @tempfile=#<Tempfile:/tmp/RackMultipart20141202-12020-1l67r2u>, @original_filename="134-paperclip.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"activity[photo]\"; filename=\"134-paperclip.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Activity"}
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 35.0313ms
+  MOPED: 54.220.4.70:10049 INSERT       database=app32120200 collection=activities documents=[{"_id"=>BSON::ObjectId('547e2cc87562752ef4010000'), "note"=>"asdasd", "photo_file_name"=>"134-paperclip.png", "photo_content_type"=>"image/png", "photo_file_size"=>32891, "photo_fingerprint"=>"0cd2ce5866e4d1b5fde40402534e7a82", "photo_updated_at"=>2014-12-02 21:19:03 UTC}] flags=[]
+                           COMMAND      database=app32120200 command={:getlasterror=>1, :w=>1} runtime: 325.9690ms
+Redirected to http://localhost:3000/activities/547e2cc87562752ef4010000
+Completed 302 Found in 584ms
+
+
+Started GET "/activities/547e2cc87562752ef4010000" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"547e2cc87562752ef4010000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={"_id"=>BSON::ObjectId('547e2cc87562752ef4010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.8185ms
+  Rendered activities/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 84ms (Views: 47.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 21:19:04 +0000
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-12-02 21:19:09 +0000
+Processing by ActivitiesController#index as HTML
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.4706ms
+  Rendered activities/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 69ms (Views: 68.7ms)
+
+
+Started GET "/activities/547e2cc87562752ef4010000" for 127.0.0.1 at 2014-12-02 21:19:11 +0000
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"547e2cc87562752ef4010000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={"_id"=>BSON::ObjectId('547e2cc87562752ef4010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 35.6318ms
+  Rendered activities/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 76ms (Views: 39.5ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-12-02 21:19:12 +0000
+Processing by ActivitiesController#index as HTML
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 33.1321ms
+  Rendered activities/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 66ms (Views: 65.5ms)
+
+
+Started GET "/activities/547e2cc87562752ef4010000" for 127.0.0.1 at 2014-12-02 21:19:34 +0000
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"547e2cc87562752ef4010000"}
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={"_id"=>BSON::ObjectId('547e2cc87562752ef4010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.4387ms
+  Rendered activities/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 74ms (Views: 38.5ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-12-02 21:27:44 +0000
+Processing by ActivitiesController#index as HTML
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 140.9497ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 34.6310ms
+  Rendered activities/index.html.erb within layouts/application (314.0ms)
+Completed 200 OK in 594ms (Views: 582.2ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/fitness_activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/fitness_activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/strength_activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/strength_activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 21:27:45 +0000
+
+
+Started GET "/fitnessactivities" for 127.0.0.1 at 2014-12-02 21:27:51 +0000
+
+ActionController::RoutingError (No route matches [GET] "/fitnessactivities"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/xxx/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/xxx/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/xxx/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.1ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.2ms)
+
+
+Started GET "/fitness_activities" for 127.0.0.1 at 2014-12-02 21:28:06 +0000
+Processing by FitnessActivitiesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/xxx/project2/app/models/fitness_activity.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :distance, type: Float,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :heart_rate, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :calories, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :duration, type: Float
+         ^):
+  app/models/fitness_activity.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/fitness_activities_controller.rb:7:in `index'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/fitness_activities" for 127.0.0.1 at 2014-12-02 21:30:12 +0000
+Processing by FitnessActivitiesController#index as HTML
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/home/xxx/project2/app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :distance, type: Float,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :heart_rate, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :calories, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :duration, type: Float
+         ^):
+  app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/fitness_activities_controller.rb:7:in `index'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+
+
+Started GET "/fitness_activities" for 127.0.0.1 at 2014-12-02 21:30:13 +0000
+Processing by FitnessActivitiesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/xxx/project2/app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :distance, type: Float,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :heart_rate, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :calories, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :duration, type: Float
+         ^):
+  app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/fitness_activities_controller.rb:7:in `index'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+
+
+Started GET "/fitness_activities" for 127.0.0.1 at 2014-12-02 21:30:14 +0000
+Processing by FitnessActivitiesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/xxx/project2/app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :distance, type: Float,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :heart_rate, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :calories, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :duration, type: Float
+         ^):
+  app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/fitness_activities_controller.rb:7:in `index'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started GET "/fitness_activities" for 127.0.0.1 at 2014-12-02 21:30:15 +0000
+Processing by FitnessActivitiesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/xxx/project2/app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :distance, type: Float,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :heart_rate, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :calories, type: Integer,
+         ^
+/home/xxx/project2/app/models/fitness_activity.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  field :duration, type: Float
+         ^):
+  app/models/fitness_activity.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/fitness_activity.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/fitness_activities_controller.rb:7:in `index'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/fitnessactivities" for 127.0.0.1 at 2014-12-02 21:34:44 +0000
+
+ActionController::RoutingError (No route matches [GET] "/fitnessactivities"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/xxx/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/xxx/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/xxx/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
+  Rendered /home/xxx/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.4ms)
+
+
+Started GET "/fitness_activities" for 127.0.0.1 at 2014-12-02 21:34:49 +0000
+Processing by FitnessActivitiesController#index as HTML
+  MOPED: 54.220.4.70:10049 COMMAND      database=admin command={:ismaster=>1} runtime: 137.7754ms
+  MOPED: 54.220.4.70:10049 QUERY        database=app32120200 collection=activities selector={"_type"=>{"$in"=>["FitnessActivity"]}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 35.3922ms
+  Rendered fitness_activities/index.html.erb within layouts/application (295.4ms)
+Completed 200 OK in 408ms (Views: 394.5ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/fitness_activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/strength_activities.css?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/fitness_activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/strength_activities.js?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-02 21:34:50 +0000

@@ -11,9 +11,10 @@ class User
   field :password_digest
   has_secure_password
 
+  has_many :activities, cascade_callbacks:true, autosave: true
+
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
-
 
   validates :first_name, :last_name,presence:true, length: { in: 2..30 }
 

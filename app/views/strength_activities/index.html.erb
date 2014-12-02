@@ -1,0 +1,31 @@
+<h1>Listing strength_activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Weigth</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @strength_activities.each do |strength_activity| %>
+      <tr>
+        <td><%= strength_activity.type %></td>
+        <td><%= strength_activity.weigth %></td>
+        <td><%= strength_activity.sets %></td>
+        <td><%= strength_activity.reps %></td>
+        <td><%= link_to 'Show', strength_activity %></td>
+        <td><%= link_to 'Edit', edit_strength_activity_path(strength_activity) %></td>
+        <td><%= link_to 'Destroy', strength_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Strength activity', new_strength_activity_path %>

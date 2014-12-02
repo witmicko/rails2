@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :strength_activities
+
+  resources :fitness_activities
+
+  resources :activities
+
   get 'users/index'
 
   get 'users/show'

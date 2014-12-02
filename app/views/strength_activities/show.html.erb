@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @strength_activity.type %>
+</p>
+
+<p>
+  <strong>Weigth:</strong>
+  <%= @strength_activity.weigth %>
+</p>
+
+<p>
+  <strong>Sets:</strong>
+  <%= @strength_activity.sets %>
+</p>
+
+<p>
+  <strong>Reps:</strong>
+  <%= @strength_activity.reps %>
+</p>
+
+<%= link_to 'Edit', edit_strength_activity_path(@strength_activity) %> |
+<%= link_to 'Back', strength_activities_path %>
