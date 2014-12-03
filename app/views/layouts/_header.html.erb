@@ -1,0 +1,16 @@
+
+<%= nav_bar :responsive => :top, :brand => "Project2", :responsive => true do %>
+    <%= menu_group do %>
+        <%= menu_item "Home", root_path %>
+        <%= menu_divider %>
+        <%= drop_down "Products" do %>
+            <%= menu_item "Things you can't afford", root_path %>
+            <%= menu_item "Things that won't suit you anyway",  root_path %>
+            <%= menu_item "Things you're not even cool enough to buy anyway",  root_path %>
+
+        <% end %>
+        <%= menu_item "About Us", about_path %>
+        <%= menu_item "Contact", contact_path %>
+    <% end %>
+
+<% end %>

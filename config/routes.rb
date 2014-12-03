@@ -5,11 +5,13 @@ Rails.application.routes.draw do
   resources :strength_activities
   resources :fitness_activities
 
+  root to: 'static_pages#home'
+  match '/help',    to: 'static_pages#help' , via: 'get'
+  match '/about',   to: 'static_pages#about', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
 
   get 'users/index'
-
   get 'users/show'
-
   get 'users/new'
 
   match '/signup', to: 'users#new', via: 'get'

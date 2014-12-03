@@ -1,3 +1,37 @@
 // Place all the styles related to the Activities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* footer */
+
+footer {
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  margin-right: 5px;
+  color: #555;
+}
+
+//footer a:hover {
+//  color: #222;
+//}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
