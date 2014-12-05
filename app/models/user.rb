@@ -25,9 +25,11 @@ class User
 
   ATHLETE_TYPES = ['Runner', 'Cyclist', 'Powerlifter']
   validates :athlete_type, inclusion: ATHLETE_TYPES
-  validates_date :date_of_birth
 
-  validates :email, presence: true, :email_format => {:message => 'invalid email'}
+  # turned off for dev stage
+  # validates_date :date_of_birth
+  # validates :email, presence: true, :email_format => {:message => 'invalid email'}
+
   validates :email, presence: true, uniqueness: {message: 'duplicate email'}
 
   index({email: 1}, {unique: true})
