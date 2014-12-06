@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   get 'users/show'
   get 'users/new'
 
+  match 'fitness_activity/new', to: 'fitness_activities#new', via:'get'
+  match 'strength_activity/new', to: 'strength_activities#new', via:'get'
+
   match '/signup', to: 'users#new', via: 'get'
 
 

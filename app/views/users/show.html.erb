@@ -1,6 +1,6 @@
 <%- model_class = User -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -19,6 +19,19 @@
   <dt><strong><%= model_class.human_attribute_name(:password_digest) %>:</strong></dt>
   <dd><%= @user.password_digest %></dd>
 </dl>
+
+<div class="span8">
+  <% if @user.activities.any? %>
+      <h3>Activities (<%= @user.activities.count %>)</h3>
+      <% for activity in @user.activities %>
+          <p><%= render activity %></p>
+      <% end %>
+  <% end %>
+</div>
+
+<%= link_to 'new fitness', fitness_activity_new_path , class: 'btn btn-large btn-primary' %>
+<%= link_to 'new strength', strength_activity_new_path, class: 'btn btn-large btn-primary' %>
+
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               users_path, :class => 'btn btn-default'  %>

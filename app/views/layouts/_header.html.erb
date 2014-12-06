@@ -2,7 +2,7 @@
     <%= menu_group do %>
         <%= menu_item "Home", root_path %>
         <% if current_user %>
-            <%= menu_item "User", root_path%>
+            <%= menu_item "User", user_path(current_user[:id])%>
         <% end %>
         <%= drop_down "Products" do %>
             <%= menu_item "Things you can't afford", root_path %>

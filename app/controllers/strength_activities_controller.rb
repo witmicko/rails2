@@ -25,10 +25,10 @@ class StrengthActivitiesController < ApplicationController
   # POST /strength_activities.json
   def create
     @strength_activity = StrengthActivity.new(strength_activity_params)
-
+    @strength_activity.user = current_user
     respond_to do |format|
       if @strength_activity.save
-        format.html { redirect_to @strength_activity, notice: 'Strength activity was successfully created.' }
+        format.html { redirect_to @current_user, notice: 'Strength activity was successfully created.' }
         format.json { render :show, status: :created, location: @strength_activity }
       else
         format.html { render :new }
@@ -69,6 +69,7 @@ class StrengthActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def strength_activity_params
-      params.require(:strength_activity).permit(:act_type, :weight, :sets, :reps)
+      params.require(:strength_activity).permit(:note, :photo, :act_type,
+                                                :weight, :sets, :reps)
     end
 end

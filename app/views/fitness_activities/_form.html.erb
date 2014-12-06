@@ -1,38 +1,49 @@
 <%= form_for(@fitness_activity) do |f| %>
-  <% if @fitness_activity.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@fitness_activity.errors.count, "error") %> prohibited this fitness_activity from being saved:</h2>
+    <% if @fitness_activity.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@fitness_activity.errors.count, "error") %> prohibited this fitness_activity from being
+            saved:</h2>
 
-      <ul>
-      <% @fitness_activity.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @fitness_activity.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :note %><br>
+      <%= f.text_field :note %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :act_type %><br>
-    <%= f.select :act_type , FitnessActivity::TYPES%>
-  </div>
+    <div class="field">
+      <%= f.label :photo %><br>
+      <%= f.file_field :photo %>
+    </div>
 
-  <div class="field">
-    <%= f.label :distance %><br>
-    <%= f.text_field :distance %>
-  </div>
-  <div class="field">
-    <%= f.label :heart_rate %><br>
-    <%= f.text_field :heart_rate %>
-  </div>
-  <div class="field">
-    <%= f.label :calories %><br>
-    <%= f.text_field :calories %>
-  </div>
-  <div class="field">
-    <%= f.label :duration %><br>
-    <%= f.text_field :duration %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :act_type %><br>
+      <%= f.select :act_type, FitnessActivity::TYPES %>
+    </div>
+
+    <div class="field">
+      <%= f.label :distance %><br>
+      <%= f.text_field :distance %>
+    </div>
+    <div class="field">
+      <%= f.label :heart_rate %><br>
+      <%= f.text_field :heart_rate %>
+    </div>
+    <div class="field">
+      <%= f.label :calories %><br>
+      <%= f.text_field :calories %>
+    </div>
+    <div class="field">
+      <%= f.label :duration %><br>
+      <%= f.text_field :duration %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

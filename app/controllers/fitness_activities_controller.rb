@@ -25,10 +25,10 @@ class FitnessActivitiesController < ApplicationController
   # POST /fitness_activities.json
   def create
     @fitness_activity = FitnessActivity.new(fitness_activity_params)
-
+    @fitness_activity.user = current_user
     respond_to do |format|
       if @fitness_activity.save
-        format.html { redirect_to @fitness_activity, notice: 'Fitness activity was successfully created.' }
+        format.html { redirect_to @current_user, notice: 'Fitness activity was successfully created.' }
         format.json { render :show, status: :created, location: @fitness_activity }
       else
         format.html { render :new }
@@ -64,11 +64,11 @@ class FitnessActivitiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_fitness_activity
-      @fitness_activity = FitnessActivity.find(params[:id])
+      @fitness_activity = FitnessActivity.where(id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fitness_activity_params
-      params.require(:fitness_activity).permit(:act_type, :distance, :heart_rate, :calories, :duration)
+      params.require(:fitness_activity).permit(:note, :photo, :act_type, :distance, :heart_rate, :calories, :duration)
     end
 end
