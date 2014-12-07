@@ -1,28 +1,35 @@
+<div class="well">
 
+  <strong>Strength</strong>
 
-<strong>Strength</strong>
-<p>
-  <strong>Note:</strong>
-  <%= strength_activity.note %>
-  <%= image_tag strength_activity.photo %>
-</p>
+  <p>
+    <strong>Note:</strong>
+    <%= strength_activity.note %>
+    <%= image_tag strength_activity.photo %>
+  </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= strength_activity.act_type %>
-</p>
+  <p>
+    <strong>Type:</strong>
+    <%= strength_activity.act_type %>
+  </p>
 
-<p>
-  <strong>Weight:</strong>
-  <%= strength_activity.weight %>
-</p>
+  <p>
+    <strong>Weight:</strong>
+    <%= strength_activity.weight %>
+  </p>
 
-<p>
-  <strong>Sets:</strong>
-  <%= strength_activity.sets %>
-</p>
+  <p>
+    <strong>Sets:</strong>
+    <%= strength_activity.sets %>
+  </p>
 
-<p>
-  <strong>Reps:</strong>
-  <%= strength_activity.reps %>
-</p>
+  <p>
+    <strong>Reps:</strong>
+    <%= strength_activity.reps %>
+  </p>
+  <% if current_user?(strength_activity.user) %>
+      <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                  edit_strength_activity_path(strength_activity), :class => 'btn btn-default' %>
+      <%= render partial: 'shared/destroy_act_btn', locals: {id: strength_activity[:id]} %>
+  <% end %>
+</div>

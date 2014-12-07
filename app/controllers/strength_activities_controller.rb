@@ -19,6 +19,7 @@ class StrengthActivitiesController < ApplicationController
 
   # GET /strength_activities/1/edit
   def edit
+    @strength_activity = current_user.activities.find_by(id: params[:id])
   end
 
   # POST /strength_activities
@@ -42,7 +43,7 @@ class StrengthActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @strength_activity.update(strength_activity_params)
-        format.html { redirect_to @strength_activity, notice: 'Strength activity was successfully updated.' }
+        format.html { redirect_to @current_user, notice: 'Strength activity was successfully updated.' }
         format.json { render :show, status: :ok, location: @strength_activity }
       else
         format.html { render :edit }
@@ -64,12 +65,16 @@ class StrengthActivitiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_strength_activity
-      @strength_activity = StrengthActivity.find(params[:id])
+      @strength_activity = current_user.activities.find_by(id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def strength_activity_params
-      params.require(:strength_activity).permit(:note, :photo, :act_type,
-                                                :weight, :sets, :reps)
+      params.require(:strength_activity).permit(:note,
+                                                :photo,
+                                                :act_type,
+                                                :weight,
+                                                :sets,
+                                                :reps)
     end
 end

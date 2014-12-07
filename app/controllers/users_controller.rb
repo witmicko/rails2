@@ -62,6 +62,24 @@ class UsersController < ApplicationController
     end
   end
 
+  def follow
+    other_user = User.find_by(id: params[:format])
+    if current_user.follow!(other_user)
+      redirect_to root_path, :flash => {notice: "Followed #{other_user.first_name} #{other_user.last_name}"}
+    else
+      redirect_to root_path, :flash => { notice: "something went wrong" }
+    end
+  end
+
+  def unfollow
+    other_user = User.find_by(id: params[:format])
+    if current_user.unfollow!(other_user)
+      redirect_to root_path, :flash => { :notice => "Unfollowed #{other_user.first_name} #{other_user.last_name}" }
+    else
+      redirect_to root_path, :flash => { :notice => "something went wrong" }
+    end
+  end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_user

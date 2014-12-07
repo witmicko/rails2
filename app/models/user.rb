@@ -13,7 +13,9 @@ class User
   field :remember_token, type: String
   has_secure_password
 
-  embeds_many :activities, cascade_callbacks: true
+  has_many :activities, dependent: :destroy
+  has_and_belongs_to_many :following, class_name: 'User', inverse_of: :followers, autosave: true
+  has_and_belongs_to_many :followers, class_name: 'User', inverse_of: :following
 
   validates :password, presence: true, length: {minimum: 6}
   validates :password_confirmation, presence: true
@@ -38,5 +40,22 @@ class User
   before_save do |user|
     user.email = email.downcase
     user.remember_token = SecureRandom.urlsafe_base64
+  end
+
+  def follow!(other_user)
+    if self.id != other_user.id && !self.following.include?(other_user)
+      self.following << other_user
+      true
+    else
+      false
+    end
+  end
+
+  def unfollow!(other_user)
+    if self.following.delete(other_user)
+      true
+    else
+      false
+    end
   end
 end

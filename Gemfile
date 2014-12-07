@@ -8,7 +8,7 @@ gem 'rails_12factor', :group => :production
 # gem 'sqlite3'
 gem 'mongoid', '~> 4.0.0'
 gem 'symbolize'
-gem 'moped', '~> 2.0.0'
+gem 'moped', '~> 2.0.2'
 gem 'bson', '~> 2.3.0'
 
 #date validation
@@ -61,5 +61,5 @@ gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 # gem 'debugger', group: [:development, :test]
 
 gem 'heroku_secrets', :github =>'alexpeattie/heroku_secrets'
-
+gem 'rake', '~> 10.4.2'
 ruby '2.1.5'

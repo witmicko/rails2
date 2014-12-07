@@ -6,7 +6,8 @@ development:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
 #      uri: <%= ENV['MONGOHQ_URL'] %>
-      uri: mongodb://heroku:W7P8NUWqIf1rmbEJuyMtndgJIhqBoW88hSKA8XnUNeIEVQfi4PB_40uXq7mtjIZJk6J_a0GkvLhnfXiUhdlc2g@lennon.mongohq.com:10049/app32120200
+#      uri: mongodb://heroku:kswUzeZOQ4UpV7eT8lyZOoFvxkhmf-VgULL6AOReFjF__w8XFeFdWfe6Gmtumam9ej26NDPMipkqqWxhIe6_XA@lennon.mongohq.com:10049/app32120200
+      uri: mongodb://mongoid:123456@lennon.mongohq.com:10049/app32120200
 #      database: project2_development
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)

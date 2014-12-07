@@ -24,7 +24,7 @@
   <% if @user.activities.any? %>
       <h3>Activities (<%= @user.activities.count %>)</h3>
       <% for activity in @user.activities %>
-          <p><%= render activity %></p>
+          <p><%= render activity, object: @user %></p>
       <% end %>
   <% end %>
 </div>
@@ -35,6 +35,7 @@
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               users_path, :class => 'btn btn-default'  %>
+
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_user_path(@user), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

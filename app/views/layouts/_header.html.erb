@@ -15,6 +15,7 @@
     <% end %>
     <%= menu_group :pull => :right do %>
         <% if current_user %>
+            <%= menu_item "#{current_user.first_name} #{current_user.last_name}", user_path(current_user) %>
             <%= menu_item "Log Out", signout_path, method: "delete" %>
 
         <% else %>

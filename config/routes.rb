@@ -18,8 +18,14 @@ Rails.application.routes.draw do
   get 'users/show'
   get 'users/new'
 
+  match 'destroy_activity', to: 'activities#destroy', via: :delete
+
   match 'fitness_activity/new', to: 'fitness_activities#new', via:'get'
   match 'strength_activity/new', to: 'strength_activities#new', via:'get'
+
+  match 'follow_user', to: 'users#follow', via: 'get'
+  match 'unfollow_user', to: 'users#unfollow', via: 'get'
+
 
   match '/signup', to: 'users#new', via: 'get'
 

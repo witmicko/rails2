@@ -19,6 +19,7 @@ class FitnessActivitiesController < ApplicationController
 
   # GET /fitness_activities/1/edit
   def edit
+    @fitness_activity  = current_user.activities.find_by(id: params[:id])
   end
 
   # POST /fitness_activities
@@ -42,7 +43,7 @@ class FitnessActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @fitness_activity.update(fitness_activity_params)
-        format.html { redirect_to @fitness_activity, notice: 'Fitness activity was successfully updated.' }
+        format.html { redirect_to @current_user, notice: 'Fitness activity was successfully updated.' }
         format.json { render :show, status: :ok, location: @fitness_activity }
       else
         format.html { render :edit }
@@ -64,7 +65,7 @@ class FitnessActivitiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_fitness_activity
-      @fitness_activity = FitnessActivity.where(id: params[:id])
+      @fitness_activity = current_user.activities.find_by(id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

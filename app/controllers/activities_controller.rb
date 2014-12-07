@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-
+  before_filter :signed_in_user, only: [:create, :destroy]
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   # GET /activities
@@ -20,12 +20,16 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1/edit
   def edit
+    @activity = current_user.activities.find_by(id: params[:format])
   end
 
   # POST /activities
   # POST /activities.json
   def create
     @activity = Activity.new(activity_params)
+    @activity.user = current_user
+    current_user.activities.push(@activity)
+
 
     respond_to do |format|
       if @activity.save
@@ -56,16 +60,15 @@ class ActivitiesController < ApplicationController
   # DELETE /activities/1.json
   def destroy
     @activity.destroy
-    respond_to do |format|
-      format.html { redirect_to activities_url, notice: 'Activity was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to @current_user, notice: 'Activity was successfully destroyed.'
+
+
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_activity
-      @activity = Activity.find(params[:id])
+      @activity = current_user.activities.find_by(id: params[:format])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
