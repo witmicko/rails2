@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user_activities = Activity.desc(:created_at).where(user: params[:id])
+    puts
   end
 
   # GET /users/new

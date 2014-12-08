@@ -13,10 +13,10 @@
   </div>
   <div class="row">
     <div class="col-xs-6">
-      <% if @user.activities.any? %>
-          <h3>Activities (<%= @user.activities.count %>)</h3>
+      <% if @user_activities.any? %>
+          <h3>Activities (<%= @user_activities.count %>)</h3>
 
-          <% for activity in @user.activities %>
+          <% for activity in @user_activities %>
               <p><%= render activity %></p>
           <% end %>
       <% end %>
