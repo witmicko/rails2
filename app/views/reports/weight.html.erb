@@ -3,12 +3,20 @@
 <div class="container-fluid">
   <div class="top-aligned-row">
     <div class="breadcrumb">
-      <strong>Body weight progress</strong>
-      <%= line_chart @mass, {library: {hAxis: {title: 'Day'}, vAxis: {title: 'Kg'}}} %>
+      <% if @mass.any? %>
+          <strong>Body weight progress</strong>
+          <%= line_chart @mass, {library: {hAxis: {title: 'Day'}, vAxis: {title: 'Kg'}}} %>
+      <% else %>
+          <h1>no data for plot, try adding some activities</h1>
+      <% end %>
     </div>
     <div class="breadcrumb">
-      <strong>Fat contents</strong>
-      <%= line_chart @fat, {library: {hAxis: {title: 'Day'}, vAxis: {title: '%'}}} %>
+      <% if @fat.any? %>
+          <strong>Fat contents</strong>
+          <%= line_chart @fat, {library: {hAxis: {title: 'Day'}, vAxis: {title: '%'}}} %>
+      <% else %>
+          <h1>no data for plot, try adding some activities</h1>
+      <% end %>
     </div>
   </div>
 </div>
