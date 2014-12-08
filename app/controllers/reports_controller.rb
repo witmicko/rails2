@@ -5,7 +5,9 @@ class ReportsController < ApplicationController
     @distance =[]
     @speed=[]
     data.each { |act|
-      @distance << [act.created_at, act.distance]
+      if act.distance
+        @distance << [act.created_at, act.distance]
+      end
       if act.distance && act.duration
         speed = act.distance.to_f / act.duration.to_f
         @speed << [act.created_at, speed]
@@ -17,10 +19,10 @@ class ReportsController < ApplicationController
   def strength
     data = StrengthActivity.where(user: params[:id])
     @weight =[]
-    data_bench = data.where(act_type:'Bench press').entries
-    data_squats = data.where(act_type:'Squats').entries
-    data_deadlift = data.where(act_type:'Deadlift').entries
-    data_ohp = data.where(act_type:'Overhead Press').entries
+    data_bench = data.where(act_type: 'Bench press').entries
+    data_squats = data.where(act_type: 'Squats').entries
+    data_deadlift = data.where(act_type: 'Deadlift').entries
+    data_ohp = data.where(act_type: 'Overhead Press').entries
 
     @bench = []
     @squats = []
