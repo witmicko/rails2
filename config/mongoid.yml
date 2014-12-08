@@ -1,3 +1,9 @@
+production:
+  sessions:
+    default:
+        uri: mongodb://mongoid:123456@lennon.mongohq.com:10049/app32120200
+    options:
+    
 development:
   # Configure available database sessions. (required)
   sessions:
