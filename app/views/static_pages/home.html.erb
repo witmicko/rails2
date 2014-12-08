@@ -3,48 +3,48 @@
 <% if current_user %>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-8 pull-left">
           <% if @feed %>
               <% for activity in @feed %>
                   <p><%= render activity %></p>
               <% end %>
+          <% else %>
+              <div class="jumbotron">
+                <h1>Add activity or follow a user to get your feed</h1>
+                <%= link_to 'Sign up now!', signup_path, class: 'btn btn-large btn-primary' %>
+              </div>
           <% end %>
         </div>
 
 
-        <div id="wrapper">
-          <div id="sidebar-wrapper">
-            <div class="well">
-              <% for user in User.all %>
-                  <% unless current_user==user %>
-                      <strong><%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %></strong>
-                      <div class="pull-right">
-                      <% if @followed.include?(user) %>
-                          <%= link_to 'unfollow', unfollow_user_path(user), :class => 'btn btn-default' %>
-                      <% else %>
-                          <%= link_to 'follow', follow_user_path(user), :class => 'btn btn-default' %>
-                      <% end %>
-                      </div>
-                  <% end %>
-              <% end %>
+        <div class="col-xs-3 pull-right">
+          <div class="panel-body  sidebar">
+            <% for user in User.all %>
+                <% unless current_user == user %>
 
-            </div>
-          </div>
-          <div id="page-content-wrapper">
-            <div class="page-content">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12">
-                    <!-- content of page -->
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <div class="well-sm">
+                      <strong><%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %></strong>
+
+                      <div class="pull-right">
+                        <% if @followed.include?(user) %>
+                            <%= link_to 'unfollow', unfollow_user_path(user), :class => 'btn btn-xs btn-danger' %>
+                        <% else %>
+                            <%= link_to 'follow', follow_user_path(user), :class => 'btn  btn-xs btn-success' %>
+                        <% end %>
+                      </div>
+                    </div>
+
+                <% end %>
+                <div class="divider"></div>
+            <% end %>
           </div>
         </div>
       </div>
-    </div>
 <% else %>
-    <%= link_to 'Sign up now!', signup_path, class: 'btn btn-large btn-primary' %>
+    <div class="jumbotron">
+      <h1>Sign up now</h1>
+      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-large btn-primary' %>
+    </div>
 
+    </div>
 <% end %>

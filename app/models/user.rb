@@ -14,13 +14,7 @@ class User
   field :remember_token, type: String
   has_secure_password
 
-  has_mongoid_attached_file :photo,
-                            :styles => {
-                                :thumb => "100x100#",
-                                :small  => "150x150>",
-                                :medium => "200x200" },
-      :default_url => "silhouette.jpg"
-
+  has_mongoid_attached_file :photo, :default_url => "silhouette.jpg"
   validates_attachment :photo, content_type: { content_type: ['image/jpg', 'image/jpeg','image/png', 'image/gif'] }
 
   has_many :activities, dependent: :destroy

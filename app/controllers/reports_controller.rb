@@ -6,7 +6,7 @@ class ReportsController < ApplicationController
     @speed=[]
     data.each { |act|
       @distance << [act.created_at, act.distance]
-      @speed << [act.distance, act.duration]
+      @speed << [act.created_at, act.distance/act.duration]
     }
   end
 

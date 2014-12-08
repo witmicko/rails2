@@ -45,6 +45,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
+        sign_in @user
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -69,16 +70,16 @@ class UsersController < ApplicationController
     if current_user.follow!(other_user)
       redirect_to root_path, :flash => {notice: "Followed #{other_user.first_name} #{other_user.last_name}"}
     else
-      redirect_to root_path, :flash => { notice: "something went wrong" }
+      redirect_to root_path, :flash => {notice: "something went wrong"}
     end
   end
 
   def unfollow
     other_user = User.find_by(id: params[:format])
     if current_user.unfollow!(other_user)
-      redirect_to root_path, :flash => { :notice => "Unfollowed #{other_user.first_name} #{other_user.last_name}" }
+      redirect_to root_path, :flash => {:notice => "Unfollowed #{other_user.first_name} #{other_user.last_name}"}
     else
-      redirect_to root_path, :flash => { :notice => "something went wrong" }
+      redirect_to root_path, :flash => {:notice => "something went wrong"}
     end
   end
 
@@ -97,6 +98,7 @@ class UsersController < ApplicationController
                                  :gender,
                                  :athlete_type,
                                  :password,
-                                 :password_confirmation)
+                                 :password_confirmation,
+                                 :photo)
   end
 end
