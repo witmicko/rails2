@@ -1,48 +1,63 @@
-<div class="well">
-  <strong>Fitness</strong>
-  <div class="pull-right"><%= fitness_activity.created_at %></div>
+<div class="container-fluid">
+  <div class="well">
+    <div class="row">
+      <div class="text-center"><strong>Fitness</strong></div>
+      <div class="col-xs-4 pull-left ">
 
-  <p>
-    <strong>User:</strong>
-    <%= link_to "#{fitness_activity.user.first_name} #{fitness_activity.user.last_name}", user_path(fitness_activity.user) %>
-  </p>
+        <% if current_user != fitness_activity.user %>
+            <%= image_tag fitness_activity.user.photo.url(:thumb), class: 'img-thumbnail' %>
+            <div class="text-center">
+              <strong>
+                <%= link_to "#{fitness_activity.user.first_name} #{fitness_activity.user.last_name}", user_path(fitness_activity.user) %>
+              </strong>
+            </div>
+        <% end %>
 
-  <p>
-    <strong>Note:</strong>
-    <%= fitness_activity.note %>
-    <% if fitness_activity.photo_content_type %>
-      <div class="pull-right"><%= image_tag fitness_activity.photo %></div>
-  <% end %>
-  </p>
+        <p>
+          <strong>Note:</strong>
+          <%= fitness_activity.note %>
+        </p>
 
-  <p>
-    <strong>Type:</strong>
-    <%= fitness_activity.act_type %>
-  </p>
+        <p>
+          <strong>Type:</strong>
+          <%= fitness_activity.act_type %>
+        </p>
 
-  <p>
-    <strong>Distance:</strong>
-    <%= fitness_activity.distance %>
-  </p>
+        <p>
+          <strong>Distance:</strong>
+          <%= fitness_activity.distance %>
+        </p>
 
-  <p>
-    <strong>Heart rate:</strong>
-    <%= fitness_activity.heart_rate %>
-  </p>
+        <p>
+          <strong>Heart rate:</strong>
+          <%= fitness_activity.heart_rate %>
+        </p>
 
-  <p>
-    <strong>Calories:</strong>
-    <%= fitness_activity.calories %>
-  </p>
+        <p>
+          <strong>Calories:</strong>
+          <%= fitness_activity.calories %>
+        </p>
 
-  <p>
-    <strong>Duration:</strong>
-    <%= fitness_activity.duration %>
-  </p>
-  <% if current_user==fitness_activity.user %>
-      <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                  edit_fitness_activity_path(fitness_activity), :class => 'btn btn-default' %>
-      <%= render partial: 'shared/destroy_act_btn', locals: {id: fitness_activity[:id]} %>
-  <% end %>
+        <p>
+          <strong>Duration:</strong>
+          <%= fitness_activity.duration %>
+        </p>
+      </div>
 
+
+      <div class="col-xs-5 pull-right">
+        <% if fitness_activity.photo_content_type %>
+            <div class="pull-right"><%= image_tag fitness_activity.photo, class: 'img-thumbnail' %></div>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <% if current_user==fitness_activity.user %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_fitness_activity_path(fitness_activity), :class => 'btn btn-default' %>
+          <%= render partial: 'shared/destroy_act_btn', locals: {id: fitness_activity[:id]} %>
+      <% end %>
+      <div class="pull-right"><%= fitness_activity.created_at.strftime("%H:%M %A %B") %></div>
+    </div>
+  </div>
 </div>

@@ -1,35 +1,62 @@
-<div class="well">
+<div class="container-fluid">
+  <div class="well">
+    <div class="row">
+      <div class="text-center"><strong>Strength</strong></div>
+      <div class="col-xs-4 pull-left ">
 
-  <strong>Strength</strong>
+        <% if current_user != strength_activity.user %>
+            <%= image_tag strength_activity.user.photo, class: 'img-responsive' %>
+            <div class="text-center">
+              <strong>
+                <%= link_to "#{strength_activity.user.first_name} #{strength_activity.user.last_name}", user_path(strength_activity.user) %>
+              </strong>
+            </div>
+        <% end %>
 
-  <p>
-    <strong>Note:</strong>
-    <%= strength_activity.note %>
-    <%= image_tag strength_activity.photo %>
-  </p>
+        <p>
+          <strong>Note:</strong>
+          <%= strength_activity.note %>
+        </p>
 
-  <p>
-    <strong>Type:</strong>
-    <%= strength_activity.act_type %>
-  </p>
+        <p>
+          <strong>Type:</strong>
+          <%= strength_activity.act_type %>
+        </p>
 
-  <p>
-    <strong>Weight:</strong>
-    <%= strength_activity.weight %>
-  </p>
+        <p>
+          <strong>Weight:</strong>
+          <%= strength_activity.weight %>
+        </p>
 
-  <p>
-    <strong>Sets:</strong>
-    <%= strength_activity.sets %>
-  </p>
+        <p>
+          <strong>Sets:</strong>
+          <%= strength_activity.sets %>
+        </p>
 
-  <p>
-    <strong>Reps:</strong>
-    <%= strength_activity.reps %>
-  </p>
-  <% if current_user?(strength_activity.user) %>
-      <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                  edit_strength_activity_path(strength_activity), :class => 'btn btn-default' %>
-      <%= render partial: 'shared/destroy_act_btn', locals: {id: strength_activity[:id]} %>
-  <% end %>
+        <p>
+          <strong>Reps:</strong>
+          <%= strength_activity.reps %>
+        </p>
+
+      </div>
+
+      <div class="col-xs-5 pull-right">
+        <% if strength_activity.photo_content_type %>
+            <div class="pull-right"><%= image_tag strength_activity.photo, class: 'img-thumbnail' %></div>
+        <% end %>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-5 pull-left">
+        <% if current_user==strength_activity.user %>
+            <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                        edit_strength_activity_path(strength_activity), :class => 'btn btn-default' %>
+            <%= render partial: 'shared/destroy_act_btn', locals: {id: strength_activity[:id]} %>
+        <% end %>
+      </div>
+      <div class="pull-right"><%= strength_activity.created_at.strftime("%H:%M %A %B") %></div>
+
+    </div>
+  </div>
 </div>

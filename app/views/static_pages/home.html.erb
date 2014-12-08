@@ -6,7 +6,6 @@
         <div class="col-lg-8">
           <% if @feed %>
               <% for activity in @feed %>
-                  <p><%#= activity.user %></p>
                   <p><%= render activity %></p>
               <% end %>
           <% end %>
