@@ -4,7 +4,7 @@ class StrengthActivitiesController < ApplicationController
   # GET /strength_activities
   # GET /strength_activities.json
   def index
-    @strength_activities = StrengthActivity.all
+    @strength_activities = StrengthActivity.desc(:created_at).where(user: params[:id] )
   end
 
   # GET /strength_activities/1

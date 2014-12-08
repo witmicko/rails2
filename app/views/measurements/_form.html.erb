@@ -1,25 +1,60 @@
-<%= form_for(@measurement) do |f| %>
-  <% if @measurement.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@measurement.errors.count, "error") %> prohibited this measurement from being saved:</h2>
+<div class="col-xs-6 pull-left">
+  <%= form_for @measurement, :html => {:class => "form-horizontal measurement"} do |f| %>
 
-      <ul>
-      <% @measurement.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% if @measurement.errors.any? %>
+          <div id="error_expl" class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= pluralize(@measurement.errors.count, "error") %> prohibited this measurement
+                from being saved:</h3>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <% @measurement.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :weight %><br>
-    <%= f.text_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label :fat %><br>
-    <%= f.text_field :fat %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      <div class="form-group">
+        <%= f.label :note, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :note, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:note) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :photo, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.file_field :photo, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:photo) %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :weight, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :weight, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:weight) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :fat, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :fat, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:fat) %>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+          <%= f.submit nil, :class => 'btn btn-primary' %>
+          <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                      user_path(current_user), :class => 'btn btn-default' %>
+        </div>
+      </div>
+
+  <% end %>
+</div>

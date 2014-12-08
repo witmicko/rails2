@@ -6,6 +6,7 @@
             <%= drop_down 'Reports' do %>
                 <%= menu_item 'Cardio', cardio_report_path(:id => current_user[:id]) %>
                 <%= menu_item 'Strength', strength_report_path(:id => current_user[:id]) %>
+                <%= menu_item 'Weight', weight_report_path(:id => current_user[:id]) %>
             <% end %>
         <% end %>
 

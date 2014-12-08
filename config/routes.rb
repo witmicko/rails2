@@ -24,12 +24,14 @@ Rails.application.routes.draw do
 
   match 'fitness_activity/new', to: 'fitness_activities#new', via:'get'
   match 'strength_activity/new', to: 'strength_activities#new', via:'get'
+  match 'measurement/new', to: 'measurements#new', via:'get'
 
   match 'follow_user', to: 'users#follow', via: 'get'
   match 'unfollow_user', to: 'users#unfollow', via: 'get'
 
   match 'cardio_report', to: 'reports#cardio', via: 'get'
   match 'strength_report', to: 'reports#strength', via: 'get'
+  match 'weight_report', to: 'reports#weight', via: 'get'
 
 
   match '/signup', to: 'users#new', via: 'get'

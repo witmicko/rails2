@@ -4,7 +4,7 @@ class MeasurementsController < ApplicationController
   # GET /measurements
   # GET /measurements.json
   def index
-    @measurements = Measurement.all
+    @measurements = Measurement.desc(:created_at).where(user: params[:id] )
   end
 
   # GET /measurements/1
@@ -25,10 +25,10 @@ class MeasurementsController < ApplicationController
   # POST /measurements.json
   def create
     @measurement = Measurement.new(measurement_params)
-
+    @measurement.user = current_user
     respond_to do |format|
       if @measurement.save
-        format.html { redirect_to @measurement, notice: 'Measurement was successfully created.' }
+        format.html { redirect_to @current_user, notice: 'Measurement was successfully created.' }
         format.json { render :show, status: :created, location: @measurement }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class MeasurementsController < ApplicationController
   def update
     respond_to do |format|
       if @measurement.update(measurement_params)
-        format.html { redirect_to @measurement, notice: 'Measurement was successfully updated.' }
+        format.html { redirect_to @current_user, notice: 'Measurement was successfully updated.' }
         format.json { render :show, status: :ok, location: @measurement }
       else
         format.html { render :edit }
@@ -64,11 +64,11 @@ class MeasurementsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_measurement
-      @measurement = Measurement.find(params[:id])
+      @measurement = current_user.activities.find_by(id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def measurement_params
-      params.require(:measurement).permit(:weight, :fat)
+      params.require(:measurement).permit(:note, :photo,:weight, :fat)
     end
 end

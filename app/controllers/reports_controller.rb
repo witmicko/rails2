@@ -34,4 +34,17 @@ class ReportsController < ApplicationController
     data_deadlift.each { |d| @deadlift << [d.created_at, d.weight] }
     data_ohp.each { |d| @ohp << [d.created_at, d.weight] }
   end
+
+  def weight
+    data = Measurement.where(user: params[:id]).entries
+    @mass = []
+    @fat = []
+    data.each { |m|
+        @mass << [m.created_at, m.weight]
+        @fat << [m.created_at, m.fat]
+    }
+
+
+
+  end
 end

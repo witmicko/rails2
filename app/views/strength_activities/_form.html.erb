@@ -1,44 +1,71 @@
-<%= form_for(@strength_activity) do |f| %>
-    <% if @strength_activity.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@strength_activity.errors.count, "error") %> prohibited this strength_activity from being
-            saved:</h2>
+<div class="col-xs-6 pull-left">
+<%= form_for @strength_activity, :html => { :class => "form-horizontal strength_activity" } do |f| %>
 
-          <ul>
-            <% @strength_activity.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+  <% if @strength_activity.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@strength_activity.errors.count, "error") %> prohibited this strength_activity from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @strength_activity.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
 
-    <div class="field">
-      <%= f.label :note %><br>
-      <%= f.text_field :note %>
+  <div class="form-group">
+    <%= f.label :note, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :note, :class => 'form-control' %>
     </div>
+    <%=f.error_span(:note) %>
+  </div>
+    <div class="form-group">
+      <%= f.label :photo, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-10">
+        <%= f.file_field :photo, :class => 'form-control' %>
+      </div>
+      <%= f.error_span(:photo) %>
+    </div>
+    <div class="form-group">
+      <%= f.label :act_type, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-10">
+        <%= f.select :act_type, StrengthActivity::TYPES, :class => 'form-control' %>
+      </div>
+      <%= f.error_span(:act_type) %>
+    </div>
+  <div class="form-group">
+    <%= f.label :weight, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :weight, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:weight) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sets, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sets, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sets) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :reps, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :reps, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:reps) %>
+  </div>
 
-    <div class="field">
-      <%= f.label :photo %><br>
-      <%= f.file_field :photo %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  user_path(current_user), :class => 'btn btn-default' %>
     </div>
+  </div>
 
-    <div class="field">
-      <%= f.label :act_type %><br>
-      <%= f.select :act_type, StrengthActivity::TYPES %>
-    </div>
-    <div class="field">
-      <%= f.label :weight %><br>
-      <%= f.text_field :weight %>
-    </div>
-    <div class="field">
-      <%= f.label :sets %><br>
-      <%= f.text_field :sets %>
-    </div>
-    <div class="field">
-      <%= f.label :reps %><br>
-      <%= f.text_field :reps %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
 <% end %>
+</div>

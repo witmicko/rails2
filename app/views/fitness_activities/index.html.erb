@@ -1,33 +1,43 @@
-<h1>Listing fitness_activities</h1>
-
-<table>
+<%- model_class = FitnessActivity -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Distance</th>
-      <th>Heart rate</th>
-      <th>Calories</th>
-      <th>Duration</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:note) %></th>
+      <th><%= model_class.human_attribute_name(:photo_file_name) %></th>
+      <th><%= model_class.human_attribute_name(:act_type) %></th>
+      <th><%= model_class.human_attribute_name(:distance) %></th>
+      <th><%= model_class.human_attribute_name(:heart_rate) %></th>
+      <th><%= model_class.human_attribute_name(:calories) %></th>
+      <th><%= model_class.human_attribute_name(:duration) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @fitness_activities.each do |fitness_activity| %>
-      <tr>
+      <tr data-link="<%= fitness_activity_path(fitness_activity) %>">
+        <td><%= fitness_activity.note %></td>
+        <td><%= fitness_activity.photo_file_name %></td>
         <td><%= fitness_activity.act_type %></td>
         <td><%= fitness_activity.distance %></td>
         <td><%= fitness_activity.heart_rate %></td>
         <td><%= fitness_activity.calories %></td>
         <td><%= fitness_activity.duration %></td>
-        <td><%= link_to 'Show', fitness_activity %></td>
-        <td><%= link_to 'Edit', edit_fitness_activity_path(fitness_activity) %></td>
-        <td><%= link_to 'Destroy', fitness_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= fitness_activity.created_at.strftime("%d %b %y") %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_fitness_activity_path(fitness_activity), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      fitness_activity_path(fitness_activity),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Fitness activity', new_fitness_activity_path %>

@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="well">
+    <div class="row">
+      <div class="text-center"><strong>Measurement</strong></div>
+      <div class="col-xs-4 pull-left ">
+
+        <% if current_user != measurement.user %>
+            <%= image_tag measurement.user.photo, class: 'img-thumbnail' %>
+            <div class="text-center">
+              <strong>
+                <%= link_to "#{measurement.user.first_name} #{measurement.user.last_name}", user_path(measurement.user) %>
+              </strong>
+            </div>
+        <% end %>
+
+        <p>
+          <strong>Note:</strong>
+          <%= measurement.note %>
+        </p>
+
+        <p>
+          <strong>Weight:</strong>
+          <%= measurement.weight %>
+        </p>
+
+        <p>
+          <strong>Fat:</strong>
+          <%= measurement.fat %>
+        </p>
+
+
+        <div class="col-xs-5 pull-right">
+          <% if measurement.photo_content_type %>
+              <div class="pull-right"><%= image_tag measurement.photo, class: 'img-thumbnail' %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <% if current_user==measurement.user %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_measurement_path(measurement), :class => 'btn btn-default' %>
+          <%= render partial: 'shared/destroy_act_btn', locals: {id: measurement[:id]} %>
+      <% end %>
+      <div class="pull-right"><%= measurement.created_at.strftime("%H:%M %A %B") %></div>
+    </div>
+  </div>
+</div>

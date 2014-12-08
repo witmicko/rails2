@@ -1,13 +1,30 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row ">
     <%= image_tag @user.photo, class: 'img-thumbnail col-xs-2' %>
 
-    <div class="important col-xs-4 pull-right text-right">
+    <div class="important col-xs-5 pull-right text-right">
       <h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
 
       <p>Active since <%= @user.created_at.strftime("%B %Y") %></p>
-        <%= link_to 'new fitness', fitness_activity_new_path, class: 'btn btn-large btn-primary' %>
-        <%= link_to 'new strength', strength_activity_new_path, class: 'btn btn-large btn-primary' %>
+      <% if current_user == @user %>
+          <div class="well pull-right text-right">
+            <strong>NEW:</strong>
+            <div class="btn-group" role="group">
+              <%= link_to 'fitness', fitness_activity_new_path, class: 'btn btn-large btn-success' %>
+              <%= link_to 'strength', strength_activity_new_path, class: 'btn btn-large btn-success' %>
+              <%= link_to 'measurement', measurement_new_path, class: 'btn btn- btn-success' %>
+            </div>
+            <br>
+            <strong>View all:</strong>
+            <div class="btn-group" role="group">
+              <%= link_to 'fitness', fitness_activities_path(:id => current_user[:id]), class: 'btn btn-large btn-info' %>
+              <%= link_to 'strength', strength_activities_path(:id => current_user[:id]), class: 'btn btn-large btn-info' %>
+              <%= link_to 'measurement', measurements_path(:id => current_user[:id]), class: 'btn btn- btn-info' %>
+            </div>
+          </div>
+
+
+      <% end %>
     </div>
 
   </div>

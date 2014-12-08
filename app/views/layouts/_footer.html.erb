@@ -1,11 +1,20 @@
-<footer class="clearfix footer">
-  <small>
-    Project2
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "About",   about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-    </ul>
-  </nav>
-</footer>
+<div class="row">
+  <footer class="clearfix footer col-xs-12">
+    <small>
+      Project2
+    </small>
+    <nav>
+      <ul>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("tr[data-link]").click(function () {
+            window.location = this.dataset.link
+        });
+    });
+</script>

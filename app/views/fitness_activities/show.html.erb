@@ -1,29 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @fitness_activity.act_type %>
-</p>
-
-<p>
-  <strong>Distance:</strong>
-  <%= @fitness_activity.distance %>
-</p>
-
-<p>
-  <strong>Heart rate:</strong>
-  <%= @fitness_activity.heart_rate %>
-</p>
-
-<p>
-  <strong>Calories:</strong>
-  <%= @fitness_activity.calories %>
-</p>
-
-<p>
-  <strong>Duration:</strong>
-  <%= @fitness_activity.duration %>
-</p>
-
-<%= link_to 'Edit', edit_fitness_activity_path(@fitness_activity) %> |
-<%= link_to 'Back', fitness_activities_path %>
+<div class="row">
+  <div class="col-xs-6">
+    <%= render @fitness_activity %>
+  </div>
+</div>

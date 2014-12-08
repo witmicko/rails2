@@ -1,49 +1,79 @@
-<%= form_for(@fitness_activity) do |f| %>
-    <% if @fitness_activity.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@fitness_activity.errors.count, "error") %> prohibited this fitness_activity from being
-            saved:</h2>
+<div class="col-xs-6 pull-left">
+  <%= form_for @fitness_activity, :html => {:class => "form-horizontal fitness_activity"} do |f| %>
 
-          <ul>
-            <% @fitness_activity.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
+      <% if @fitness_activity.errors.any? %>
+          <div id="error_expl" class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= pluralize(@fitness_activity.errors.count, "error") %> prohibited this
+                fitness_activity from being saved:</h3>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <% @fitness_activity.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :note, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :note, :class => 'form-control' %>
         </div>
-    <% end %>
+        <%= f.error_span(:note) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :photo, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.file_field :photo, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:photo) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :act_type, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.select :act_type, FitnessActivity::TYPES, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:act_type) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :distance, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :distance, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:distance) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :heart_rate, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :heart_rate, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:heart_rate) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :calories, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :calories, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:calories) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :duration, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :duration, :class => 'form-control' %>
+        </div>
+        <%= f.error_span(:duration) %>
+      </div>
 
-    <div class="field">
-      <%= f.label :note %><br>
-      <%= f.text_field :note %>
-    </div>
+      <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+          <%= f.submit nil, :class => 'btn btn-primary' %>
+          <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                      user_path(current_user), :class => 'btn btn-default' %>
+        </div>
+      </div>
 
-    <div class="field">
-      <%= f.label :photo %><br>
-      <%= f.file_field :photo %>
-    </div>
-
-    <div class="field">
-      <%= f.label :act_type %><br>
-      <%= f.select :act_type, FitnessActivity::TYPES %>
-    </div>
-
-    <div class="field">
-      <%= f.label :distance %><br>
-      <%= f.text_field :distance %>
-    </div>
-    <div class="field">
-      <%= f.label :heart_rate %><br>
-      <%= f.text_field :heart_rate %>
-    </div>
-    <div class="field">
-      <%= f.label :calories %><br>
-      <%= f.text_field :calories %>
-    </div>
-    <div class="field">
-      <%= f.label :duration %><br>
-      <%= f.text_field :duration %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-<% end %>
+  <% end %>
+</div>
