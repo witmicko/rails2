@@ -6,7 +6,11 @@ class ReportsController < ApplicationController
     @speed=[]
     data.each { |act|
       @distance << [act.created_at, act.distance]
-      @speed << [act.created_at, act.distance/act.duration]
+      if act.distance && act.duration
+        speed = act.distance.to_f / act.duration.to_f
+        @speed << [act.created_at, speed]
+      end
+      puts
     }
   end
 
