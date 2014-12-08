@@ -1,25 +1,28 @@
 <div class="container-fluid">
   <div class="row">
-    <%= image_tag @user.photo.url(:thumb), class: 'img-thumbnail col-lg-2' %>
+    <%= image_tag @user.photo.url(:thumb), class: 'img-thumbnail col-xs-2' %>
 
-    <div class="important col-lg-4 pull-right text-right">
+    <div class="important col-xs-4 pull-right text-right">
       <h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
-      <p>Active since <%= @user.created_at.strftime("%B %Y") %>
+
+      <p>Active since <%= @user.created_at.strftime("%B %Y") %></p>
+        <%= link_to 'new fitness', fitness_activity_new_path, class: 'btn btn-large btn-primary' %>
+        <%= link_to 'new strength', strength_activity_new_path, class: 'btn btn-large btn-primary' %>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <% if @user.activities.any? %>
+          <h3>Activities (<%= @user.activities.count %>)</h3>
+
+          <% for activity in @user.activities %>
+              <p><%= render activity %></p>
+          <% end %>
+      <% end %>
     </div>
   </div>
-
-
-  <%= link_to 'new fitness', fitness_activity_new_path, class: 'btn btn-large btn-primary' %>
-  <%= link_to 'new strength', strength_activity_new_path, class: 'btn btn-large btn-primary' %>
-
-  <div class="col-lg-5">
-    <% if @user.activities.any? %>
-        <h3>Activities (<%= @user.activities.count %>)</h3>
-        <% for activity in @user.activities %>
-            <p><%= render activity%></p>
-        <% end %>
-    <% end %>
-  </div>
+  \
 
 
 

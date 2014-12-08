@@ -1,0 +1,14 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
+<div class="container-fluid">
+  <div class="top-aligned-row">
+    <div class="breadcrumb">
+      <strong>Running distance</strong>
+      <%= line_chart @distance, {library: {hAxis: {title: 'Day'}, vAxis: {title: 'Distance'}}} %>
+    </div>
+    <div class="breadcrumb">
+      <strong>Running speed</strong>
+      <%= line_chart @speed, {library: {hAxis: {title: 'Duration'}, vAxis: {title: 'Distance'}}} %>
+    </div>
+  </div>
+</div>

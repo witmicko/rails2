@@ -137,6 +137,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bson (v2.3.0, RVM: ruby-2.1.5 [project2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.1.5 [project2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.7.6, RVM: ruby-2.1.5 [project2]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chartkick (v1.3.2, RVM: ruby-2.1.5 [project2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="climate_control (v0.0.3, RVM: ruby-2.1.5 [project2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cocaine (v0.5.4, RVM: ruby-2.1.5 [project2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.0.1, RVM: ruby-2.1.5 [project2]) [gem]" level="application" />

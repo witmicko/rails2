@@ -1,0 +1,17 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
+<div class="container-fluid">
+  <div class="top-aligned-row">
+    <div class="breadcrumb">
+      <strong>Weight progress</strong>
+      <%= line_chart [{name: 'Bench press', data: @bench},
+                      {name: 'Squats', data: @squats},
+                      {name: 'Deadlift', data: @deadlift},
+                      {name: 'Over head', data: @ohp}
+                     ],
+                     {library: {hAxis: {title: 'Day'}, vAxis: {title: 'Load'}},
+                     }
+      %>
+    </div>
+  </div>
+</div>

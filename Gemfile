@@ -17,6 +17,9 @@ gem 'validates_timeliness', '~> 3.0'
 #email validation
 gem 'validates_email_format_of'
 
+#charts
+gem "chartkick"
+
 #bootstrap
 gem "therubyracer"
 gem "less-rails"

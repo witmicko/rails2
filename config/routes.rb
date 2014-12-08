@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   match 'follow_user', to: 'users#follow', via: 'get'
   match 'unfollow_user', to: 'users#unfollow', via: 'get'
 
+  match 'cardio_report', to: 'reports#cardio', via: 'get'
+  match 'strength_report', to: 'reports#strength', via: 'get'
+
 
   match '/signup', to: 'users#new', via: 'get'
 
